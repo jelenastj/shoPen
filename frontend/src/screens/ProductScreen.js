@@ -20,9 +20,9 @@ const ProductScreen = ({ history, match }) => {
     dispatch(listProductDetails(match.params.id))
   }, [dispatch, match])
 
-const addToCartHandler = () => {
-history.push(`/cart/${match.params.id}?qty=${qty}` )
-}
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`)
+  }
 
   return (
     <>
@@ -98,7 +98,7 @@ history.push(`/cart/${match.params.id}?qty=${qty}` )
 
                   <ListGroupItem>
                     <Button
-                    onClick={addToCartHandler}
+                      onClick={addToCartHandler}
                       className='btn-block'
                       type='button'
                       disabled={product.countInStock === 0}>
